@@ -461,12 +461,12 @@ body {
         align-items: flex-start;
         gap: 1rem;
     }
-I have created the main index.html file for the frontend of the LeetCode clone. Next, I will create the styles.css file to style the frontend with a modern and clean design.
+/* I have created the main index.html file for the frontend of the LeetCode clone. Next, I will create the styles.css file to style the frontend with a modern and clean design.
 
 <create_file>
 <path>styles.css</path>
 <content>
-/* Reset and Base Styles */
+Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
