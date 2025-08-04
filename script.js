@@ -1,3 +1,5 @@
+console.log("script.js loaded and running");
+
 // Sample problems data
 const problems = [
     {
@@ -94,7 +96,7 @@ function loadProblems() {
         
         row.innerHTML = `
             <div class="status-icon ${statusIcon.class}">${statusIcon.icon}</div>
-            <div class="problem-title" onclick="openProblem(${problem.id})">${problem.title}</div>
+            <div class="problem-title">${problem.title}</div>
             <div class="difficulty ${difficultyClass}">${problem.difficulty}</div>
             <div class="acceptance">${problem.acceptance}</div>
             <div class="tags">
@@ -103,6 +105,10 @@ function loadProblems() {
         `;
         
         problemsList.appendChild(row);
+
+        // Add event listener for problem title click
+        const titleElement = row.querySelector('.problem-title');
+        titleElement.addEventListener('click', () => openProblem(problem.id));
     });
 }
 
@@ -153,12 +159,14 @@ function openProblem(problemId) {
     // Reset code editor
     codeInput.value = getDefaultCode(problem.title);
     
-    problemModal.style.display = 'block';
+    // Show modal by adding class
+    problemModal.classList.add('modal-show');
 }
 
 // Close problem modal
 function closeModal() {
-    problemModal.style.display = 'none';
+    // Hide modal by removing class
+    problemModal.classList.remove('modal-show');
 }
 
 // Get default code template based on problem
