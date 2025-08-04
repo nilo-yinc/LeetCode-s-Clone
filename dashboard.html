@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CodeChallenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>CodeChallenge</span>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Problems</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="#contest" class="nav-link">Contest</a>
+                <a href="#discuss" class="nav-link">Discuss</a>
+            </div>
+            <div class="nav-auth">
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/32" alt="User" class="user-avatar">
+                    <span>John Doe</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-container">
+        <!-- Stats Overview -->
+        <section class="stats-overview">
+            <div class="container">
+                <h1>Dashboard</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Problems Solved</h3>
+                            <span class="stat-number">127</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Current Streak</h3>
+                            <span class="stat-number">15</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Ranking</h3>
+                            <span class="stat-number">#1,234</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Total Time</h3>
+                            <span class="stat-number">48h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Charts -->
+        <section class="progress-section">
+            <div class="container">
+                <div class="progress-grid">
+                    <div class="progress-card">
+                        <h3>Difficulty Progress</h3>
+                        <div class="progress-chart">
+                            <div class="progress-item">
+                                <span>Easy</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%;">75/100</div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <span>Medium</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%;">45/100</div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <span>Hard</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 25%;">7/28</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-card">
+                        <h3>Topic Progress</h3>
+                        <div class="topic-progress">
+                            <div class="topic-item">
+                                <span>Array</span>
+                                <div class="topic-bar">
+                                    <div class="topic-fill" style="width: 80%;">32/40</div>
+                                </div>
+                            </div>
+                            <div class="topic-item">
+                                <span>String</span>
+                                <div class="topic-bar">
+                                    <div class="topic-fill" style="width: 65%;">26/40</div>
+                                </div>
+                            </div>
+                            <div class="topic-item">
+                                <span>Dynamic Programming</span>
+                                <div class="topic-bar">
+                                    <div class="topic-fill" style="width: 40%;">12/30</div>
+                                </div>
+                            </div>
+                            <div class="topic-item">
+                                <span>Tree</span>
+                                <div class="topic-bar">
+                                    <div class="topic-fill" style="width: 55%;">11/20</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="activity-section">
+            <div class="container">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                        <h3>Recent Submissions</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon success">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Two Sum</h4>
+                                    <p>Accepted • 2 minutes ago</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon error">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Add Two Numbers</h4>
+                                    <p>Wrong Answer • 1 hour ago</p>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon success">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Longest Substring</h4>
+                                    <p>Accepted • 3 hours ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activity-card">
+                        <h3>Upcoming Contests</h3>
+                        <div class="contest-list">
+                            <div class="contest-item">
+                                <div class="contest-info">
+                                    <h4>Weekly Contest 123</h4>
+                                    <p>Starts in 2 days</p>
+                                </div>
+                                <button class="btn btn-primary">Register</button>
+                            </div>
+                            <div class="contest-item">
+                                <div class="contest-info">
+                                    <h4>Biweekly Contest 45</h4>
+                                    <p>Starts in 5 days</p>
+                                </div>
+                                <button class="btn btn-outline">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar Heatmap -->
+        <section class="heatmap-section">
+            <div class="container">
+                <h3>Activity Heatmap</h3>
+                <div class="heatmap-container">
+                    <div class="heatmap-grid" id="heatmap-grid">
+                        <!-- Heatmap will be generated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

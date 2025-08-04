@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeetCode Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-code"></i>
+                <span>CodeChallenge</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#problems" class="nav-link active">Problems</a>
+                <a href="#contest" class="nav-link">Contest</a>
+                <a href="#discuss" class="nav-link">Discuss</a>
+                <a href="#profile" class="nav-link">Profile</a>
+            </div>
+            <div class="nav-auth">
+                <button class="btn btn-outline">Sign In</button>
+                <button class="btn btn-primary">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Master Your Coding Skills</h1>
+            <p>Practice with 1000+ coding problems and improve your problem-solving abilities</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Problems</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Users</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1M+</span>
+                    <span class="stat-label">Submissions</span>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-large">Start Practicing</button>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section id="problems" class="problems-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>All Problems</h2>
+                <div class="filters">
+                    <select class="filter-select">
+                        <option>All Topics</option>
+                        <option>Array</option>
+                        <option>String</option>
+                        <option>Dynamic Programming</option>
+                        <option>Tree</option>
+                        <option>Graph</option>
+                    </select>
+                    <select class="filter-select">
+                        <option>All Difficulties</option>
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="problems-table">
+                <div class="table-header">
+                    <span>Status</span>
+                    <span>Title</span>
+                    <span>Difficulty</span>
+                    <span>Acceptance</span>
+                    <span>Tags</span>
+                </div>
+                <div id="problems-list">
+                    <!-- Problems will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Detail Modal -->
+    <div id="problem-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="problem-title">Problem Title</h3>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="problem-description">
+                    <div class="difficulty-badge" id="problem-difficulty">Medium</div>
+                    <p id="problem-description-text">Problem description will appear here...</p>
+                    <div class="examples">
+                        <h4>Examples:</h4>
+                        <div id="problem-examples"></div>
+                    </div>
+                </div>
+                <div class="code-editor-container">
+                    <div class="editor-header">
+                        <select class="language-select">
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="cpp">C++</option>
+                        </select>
+                        <button class="btn btn-success" onclick="runCode()">Run</button>
+                        <button class="btn btn-primary" onclick="submitCode()">Submit</button>
+                    </div>
+                    <div class="code-editor">
+                        <textarea id="code-input" placeholder="// Write your code here..."></textarea>
+                    </div>
+                    <div class="output-panel">
+                        <h4>Output:</h4>
+                        <pre id="output-result"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
